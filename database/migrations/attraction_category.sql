@@ -1,0 +1,15 @@
+INSERT INTO `attraction_category` (`id`, `attraction_id`, `category_id`, `created_at`, `updated_at`) VALUES
+(1, 1, 14, NULL, NULL),
+(2, 1, 5, NULL, NULL),
+(3, 2, 14, NULL, NULL),
+(4, 2, 5, NULL, NULL),
+(5, 3, 14, NULL, NULL),
+(6, 3, 16, NULL, NULL),
+(9, 5, 1, NULL, NULL),
+(10, 5, 5, NULL, NULL),
+(11, 5, 14, NULL, NULL),
+(12, 5, 16, NULL, NULL),
+(13, 6, 14, NULL, NULL),
+(14, 6, 16, NULL, NULL),
+(15, 7, 1, NULL, NULL),
+(16, 7, 5, NULL, NULL);
