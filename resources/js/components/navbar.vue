@@ -4,10 +4,12 @@
               <div class="container">
 
                   <!-- APP LOGO -->
-                    <router-link to="/" class="navbar-brand"><h3>iWander</h3></router-link>
+                    <router-link to="/" class="navbar-brand">
+                      <!-- Replace h3 heading with an image of the logo -->
+                      <img src="/images/iwander-logo-lg.png" alt="iWander Logo" />
+                    </router-link>
 
                   <div class="navbar-search d-none d-md-block d-lg-block">
-                      <!-- <span class="lnr lnr-magnifier"></span> -->
                       <autocomplete> </autocomplete>
                   </div>
 

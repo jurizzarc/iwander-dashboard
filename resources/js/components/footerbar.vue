@@ -4,7 +4,12 @@
             <div class="row">
 
                 <div class="col-lg-3 col-sm-12 footer-col">
+                    <img src="/images/iwander-logo-lg.png" alt="iWander logo">
                     <p>&copy; 2020 iWander</p>
+                    <p>
+                        Paper plane icon<br/> made by <a href="https://www.flaticon.com/authors/freepik">Freepik</a>
+                        <br/>from <a href="http://www.flaticon.com/">www.flaticon.com</a>
+                    </p> 
                 </div>
 
                 <div class="col-lg-3 col-sm-12 footer-col">

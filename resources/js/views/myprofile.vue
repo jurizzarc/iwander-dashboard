@@ -51,17 +51,17 @@
                                 </b-tab>
 
                                 <b-tab title="Bookmarks">
-                                    <div v-for="bookmark in bookmarks">
+                                    <div v-for="bookmark in bookmarks" style="position: relative;">
 
                                       <!-- bookmarked restaurant -->
                                         <div v-if="bookmark.key === 0">
                                             <router-link :to="{ name: 'restaurant', params: {res_id: bookmark.restaurants.id} }">
                                                 <h5>{{bookmark.restaurants.name}}</h5>
                                             </router-link>
-                                            <span @click="deleteBookmark(bookmark.bookmark_id)" class="float-right"><jam-close/></span>
-                                            <!-- <button type="button" @click="deleteBookmark(bookmark.bookmark_id)"  class="float-right">
+
+                                            <button type="button" @click="deleteBookmark(bookmark.bookmark_id)">
                                                 <jam-close/>
-                                            </button>asdasd -->
+                                            </button>
 
                                             <p>
                                                 {{bookmark.restaurants.location.locality_verbose}}
@@ -74,9 +74,9 @@
                                                 <h5>{{bookmark.attractions.name}}</h5>
                                             </router-link>
 
-                                            <span type="button" @click="deleteBookmark(bookmark.bookmark_id)" class="float-right">
+                                            <button type="button" @click="deleteBookmark(bookmark.bookmark_id)">
                                                 <jam-close/>
-                                            </span>
+                                            </button>
 
                                             <p>
                                                 {{bookmark.attractions.addresses.address1}}, {{bookmark.attractions.addresses.city.name}}
@@ -89,9 +89,9 @@
                                                 <h5>Itinerary: Trip to {{bookmark.itineraries.destination}}</h5>
                                             </router-link>
 
-                                            <span type="button" @click="deleteBookmark(bookmark.bookmark_id)"  class="float-right">
+                                            <button type="button" @click="deleteBookmark(bookmark.bookmark_id)">
                                                 <jam-close/>
-                                            </span>
+                                            </button>
 
                                             <p>
                                                 By {{bookmark.itineraries.user.name}}

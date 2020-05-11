@@ -20,11 +20,7 @@
 
     <!-- Axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <!-- Icons -->
+    <!-- Linear Icons CSS -->
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 
     <!-- Styles -->
@@ -32,12 +28,11 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/jam-icons/css/jam.min.css">
 
-
-    <!-- Flickity CSS -->
-   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-
     <!-- Linear Icons JS -->
     <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/iwander-favicon.png">
 </head>
 
 <body>

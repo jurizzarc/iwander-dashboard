@@ -1,25 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
+@include('inc.sidebar')
+
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+    <div class="row">
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                      </form>
-                    </li>
+        <div class="col-12 col-lg-8 offset-lg-3">
 
-                    You are logged in as an admin!
+            <div class="row top-row">
+                <div class="col-12">
+                    <h2>{{ Auth::user()->name }}</h2>
+                    <p>{{ Auth::user()->email }}</p>
                 </div>
             </div>
+
         </div>
+
     </div>
 </div>
 @endsection

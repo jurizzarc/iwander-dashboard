@@ -1,53 +1,64 @@
 @extends('layouts.app')
 
 @section('content')
+@include ('inc.sidebar')
+
 <div class="container">
     <div class="row">
-        <div class="col-md-8 offset-md-2">
-            <div class="card">
-                <div class="card-header">
-                    City: {{ $city->name }}
+
+        <div class="col-12 col-lg-6 offset-lg-4 col-md-9 offset-md-3">
+            <div class="row">
+
+                <div class="col-lg-12" style="margin-top: 50px;">
+                    @include('inc.flash-messages')
                 </div>
 
-                <div class="card-body">
-                    <table id="table-doctors" class="table table-hover">
-                        <tbody>
-                            <tr>
-                                <td>District</td>
-                                <td>{{ $city->districts->name }}</td>
-                            </tr>
+                <div class="col-12 item-title">
+                    <h4>{{ $city->name }}</h4>
+                </div>
 
-                            <tr>
-                                <td>Country</td>
-                                <td>{{ $city->districts->country->name }}</td>
-                            </tr>
+                <div class="col-12 item-image">
+                    <img src="{{ asset('../images/'.$city->image) }}">
+                </div>
 
-                            <tr>
-                                <td>Description</td>
-                                <td>{{ $city->description }}</td>
-                            </tr>
-                            <tr>
-                                <td>image</td>
-                                <td>
-                                  <img src="{{asset('storage/images/'.$city->image)}}" style="width: 300px; height:auto;" />
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="col-12 item-info">
+                    <div class="row">
 
-                    <a href="{{ route('admin.cities.index') }}" class="btn btn-default">Back</a>
+                        <div class="col-lg-6 col-sm-12 info-col">
+                            <h6 class="column-name">District</h6>
+                            <p class="column-data">{{ $city->districts->name }}</p>
+                        </div>
 
-                    <a href="{{ route('admin.cities.edit', $city->id) }}" class="btn btn-warning">Edit</a>
+                        <div class="col-lg-6 col-sm-12 info-col">
+                            <h6 class="column-name">Country</h6>
+                            <p class="column-data">{{ $city->districts->country->name }}</p>
+                        </div>
 
-                    <form style="display:inline-block" method="POST" action="{{ route('admin.cities.destroy', $city->id) }}">
-                        <input type="hidden" name="_method" value="DELETE">
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <button type="submit" class="form-control btn btn-danger">Delete</button>
-                    </form>
+                        <div class="col-12 info-col">
+                            <h6 class="column-name">Description</h6>
+                            <p class="column-data">{{ $city->description }}</p>
+                        </div>
+
+                    </div>
+
+                    <div class="row buttons-row">
+                        <div class="col-lg-3 col-6">
+                            <a class="btn btn-primary" href="{{ route('admin.cities.edit', $city->id) }}" role="button">Edit</a>
+                        </div>
+
+                        <div class="col-lg-3 col-6">
+                            <form method="POST" action="{{ route('admin.cities.destroy', $city->id) }}">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <button type="submit" class="btn btn-secondary">Delete</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </div>
+
     </div>
 </div>
 @endsection
